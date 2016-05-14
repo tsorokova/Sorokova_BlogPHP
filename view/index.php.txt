@@ -1,0 +1,57 @@
+<html>
+	<head>
+	 <meta charset="utf-8">
+		<title>Sorokova`s</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	
+	<body style="background:#FFFFF0";>
+			
+
+		<div class="col-md-10 col-md-offset-1">
+		
+			<div class="page-header"> <center>
+				<h3>Fashion lover, style bloger</h3> </center>
+				<a href="index.php"><img src="Sorokova/logo.jpg" width="189" height="255"></a>
+				<?php if ($user == 'adminadmin') { ?>
+				<div id="search-form">
+					<form method="post" action="Sorokova/post.php" >
+						<input type="text" name="query" placeholder="search">
+						<input type="submit" value="Search!">
+					</form>
+				<?php } ?>
+				</div>
+			</div>
+
+			<div>
+				<ul class="nav nav-tabs">
+				  <li role="presentation" class="active"><a href="#">Spring 2016</a></li>
+				  <li role="presentation"><a href="#">Winter 2015</a></li>
+				  <li role="presentation"><a href="#">Autumn 2015</a></li>
+				</ul>
+
+			
+		
+				<div id="content">
+					<?php foreach ($posts as $post) { ?>
+					<div class="post">
+						<h1 style="color:#9400D3" class="title"><?php echo $post->get_title(); ?></h1>
+						<p  style="color:#483D8B" class="text"><?php echo $post->preview(); ?></p>
+						<a style="color:#1E90FF" href="post.php?title=<?php echo $post->get_title(); ?>"> Continue...</a>
+					</div>
+
+				<?php } ?>
+				</div>
+			</div>
+			<div>
+				<button type="button" class="btn btn-success"><a href="new_post.php"> Add new POST</a></button>
+			</div>
+		</div>
+		<?php if ($user == 'adminadmin') { ?>
+		<div id="footer">
+			<p>Sorokova</p>
+		</div>
+		<?php } ?>
+	</body>
+</html>

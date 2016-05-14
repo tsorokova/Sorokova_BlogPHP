@@ -1,0 +1,31 @@
+<html>
+	<head>
+	 <meta charset="utf-8">
+		<title>Sorokova`s</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	
+	<body style="background:#FFFFF0";>
+			
+
+		<div class="col-md-10 col-md-offset-1">
+		
+			<div class="page-header"> <center>
+				<h3>Fashion lover, style bloger</h3> </center>
+	
+			</div>
+
+			<a href="index.php"><img src="Sorokova/logo.jpg" width="189" height="255"></a>
+
+				<div id="content">
+					
+					<div class="post">
+						<p  style="color:#483D8B" class="text"><?php echo $post->get_text(); ?></p>
+					
+						
+					</div>
+
+	
+	</body>
+</html>
